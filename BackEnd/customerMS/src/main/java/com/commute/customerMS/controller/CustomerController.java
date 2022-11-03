@@ -22,7 +22,7 @@ import com.commute.customerMS.service.CustomerService;
 
 
 @RestController
-@CrossOrigin
+@CrossOrigin(origins = "http://localhost:4100")
 @RequestMapping("/api/v1/")
 public class CustomerController {
 	
