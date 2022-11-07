@@ -34,5 +34,12 @@ public class PlanService {
 		
 		return planDTOs;
 	}
+	
+	//Fetch specific plan details
+	public PlanDTO getSpecificPlan(int planId) {
+		logger.info("Plan details: {}", planId);
+		
+		return PlanDTO.valueOf(planRepo.findById(planId).get());
+	}
 
 }
