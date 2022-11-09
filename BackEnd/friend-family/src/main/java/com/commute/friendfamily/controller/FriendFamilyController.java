@@ -18,7 +18,7 @@ import com.commute.friendfamily.service.FriendFamilyService;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4100")
-@RequestMapping("/api/v1/")
+@RequestMapping("/api/v1")
 public class FriendFamilyController {
 	
 	Logger logger = LoggerFactory.getLogger(this.getClass());

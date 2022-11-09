@@ -16,7 +16,7 @@ import com.commute.calldetails.service.CallDetailsService;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4100")
-@RequestMapping("/api/v1/")
+@RequestMapping("/api/v1")
 public class CallDetailsController {
 	
 	Logger logger = LoggerFactory.getLogger(this.getClass());

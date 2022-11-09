@@ -23,7 +23,7 @@ import com.commute.customerMS.service.CustomerService;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4100")
-@RequestMapping("/api/v1/")
+@RequestMapping("/api/v1")
 public class CustomerController {
 	
 	Logger logger = LoggerFactory.getLogger(this.getClass());

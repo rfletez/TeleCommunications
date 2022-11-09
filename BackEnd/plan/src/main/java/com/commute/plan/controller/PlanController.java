@@ -16,7 +16,7 @@ import com.commute.plan.service.PlanService;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4100")
-@RequestMapping("/api/v1/")
+@RequestMapping("/api/v1")
 public class PlanController {
 	
 	Logger logger = LoggerFactory.getLogger(this.getClass());
