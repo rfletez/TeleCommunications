@@ -1,3 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
 
+/*Header Styles*/
+nav#headerStyle {
+    background-color: #034acefa !important;
+    color: white !important;
+    border-bottom: 1px solid #034acefa;
+    box-shadow: 0 0 10px 3px rgb(33, 37, 41);
+}
+a {
+    color: white !important;
+}
+a:hover {
+    font-weight: 700;
+    color: white !important;
+}
 
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+}
+.activeLink {
+    color: rgba(255, 255, 255, 1);
+    font-weight: 750;
+    font-style: italic;
+}
