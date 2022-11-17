@@ -1,0 +1,13 @@
+.carousel-item {
+    height: 85vh;
+}
+
+.carousel-caption {
+    bottom: 50px !important;
+}
+
+.cust {
+    color: white;
+    border-color: white;
+}
+
