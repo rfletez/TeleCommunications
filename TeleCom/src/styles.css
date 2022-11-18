@@ -23,3 +23,75 @@ a:hover {
     font-weight: 750;
     font-style: italic;
 }
+
+.nav-link:focus, .nav-link:hover {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 600;
+}
+
+.main-content {
+    margin-top: 10%;
+    height: 100%;
+}
+
+input {
+    border: 0px;
+    width: 100%;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.445);
+    box-shadow: 0 1px 0.4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.ng-invalid:not(form).ng-dirty:not(form) {
+    border-color: red !important;
+    box-shadow: 0 0 0 0.2em rgb(212, 158, 158) !important;
+}
+.card-header:first-child {
+    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+    font-size: larger;
+}
+
+p {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+}
+
+.p-field.p-grid, .p-formgrid.p-grid {
+    margin-top: 0.25;
+}
+
+.btnMargin {
+    margin-left: 5px !important;
+}
+
+.p-field-checkbox, .p-field-radiobutton {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+body .ui-tabview.ui-tabview-top .ui-tabview-nav li a,
+body .ui-tabview.ui-tabview-bottom .ui-tabview-nav li a,
+body .ui-tabview.ui-tabview-left .ui-tabview-nav li a,
+body .ui-tabview.ui-tabview-right .ui-tabview-nav li a {
+    float: none;
+    display: inline-block;
+    color: #333333;
+    padding: 0.571em 1em;
+    font-weight: 700;
+    background: rgb(9, 114, 206/0.5);
+}
+
+.ui-paginator .ui-paginator-icon {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 1em;
+    height: 1em;
+    margin-top: -0.5em;
+    margin-left: -0.5em;
+    color: black;
+}

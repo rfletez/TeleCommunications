@@ -40,3 +40,25 @@ td, th {
 section {
     padding-top: 2rem;
 }
+
+h6 {
+    color: #900;
+}
+.font-weight-bolder {
+    font-weight: 900;
+}
+
+.display-1, .display-2, .display-3, .display-4 {
+    font-weight: 900;
+}
+
+.heading-big {
+    font-weight: 800;
+    text-transform: uppercase;
+    color: red;
+    margin: 0;
+    padding: 0.15rem 0;
+    line-height: 1.2;
+    font-size: 2rem;
+    transition: color 0.5s ease-in, border-color 0.5s ease-in-out;
+}
