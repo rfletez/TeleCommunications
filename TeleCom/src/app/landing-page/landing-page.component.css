@@ -62,3 +62,12 @@ h6 {
     font-size: 2rem;
     transition: color 0.5s ease-in, border-color 0.5s ease-in-out;
 }
+.heading-big-square {
+    padding: 1rem 1rem;
+    border: 10px solid red;
+    margin: 0.5rem auto 1rem auto;
+}
+.heading-big:hover {
+    color: #f90;
+    border-color: #f90;
+}
