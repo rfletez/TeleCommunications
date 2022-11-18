@@ -71,3 +71,123 @@ h6 {
     color: #f90;
     border-color: #f90;
 }
+
+.card {
+    transition: 0.5s ease;
+    border-radius: 0;
+    transform: perspective(3em) rotateX(0deg) rotateY(-1.175deg) rotateZ(-1deg);
+}
+.card-header {
+    border-radius: 0;
+}
+.card-footer {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.card-header, .card-footer {
+    transition: 0.5s ease;
+}
+.card:hover {
+    transform: perspective(0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.card:hover .card-header,
+.card:hover .card-footer {
+    color: black;
+}
+.card:hover .promotion-promo {
+    transform: scale(1.175) translateY(2.5px);
+    transform-origin: left center;
+}
+.card:hover .promotion-price {
+    transform: translate(2.5px, 17.5px) scale(1.15);
+    transform-origin: center right;
+}
+.card-body {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.card .btn {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.promotion-promo {
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: #041886;
+    font-family: "Montserrat", sans-serif;
+    transition: 0.25s linear;
+}
+.promotion-price {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #041886;
+    width: 92px;
+    height: 92px;
+    padding-bottom: 0rem;
+    padding-top: 1.25rem;
+    text-align: center;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1rem;
+    border-radius: 5rem;
+    color: #fff;
+    z-index: -1;
+    transform: translate(5px, 27.5px) rotate(-9deg);
+    border: 1px dashed #fff;
+    transition: 0.25s linear;
+    line-height: 1.15;
+}
+.promotion-price-desc {
+    padding: 0;
+    margin-top: -10px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    display: block;
+}
+.promotion-price-text {
+    padding: 0;
+    margin: 0 auto;
+    font-weight: 900;
+}
+
+.card-animate {
+    counter-reset: section;
+}
+.card-animate .card-body:before {
+    transition: 0.5s ease;
+    counter-increment: section;
+    content: "" counter(section) "";
+    display: block;
+    font-size: 15rem;
+    font-weight: 900;
+    position: absolute;
+    bottom: 5rem;
+    line-height: 0;
+    left: -0.85rem;
+    padding: 0;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.1);
+    z-index: 0;
+}
+
+.card-animate .card:hover .card-body:before {
+    transform: translate(10px, -10px);
+}
+.card-animate .card:text {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.card-animate .card-title {
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.bg-primary-Cust {
+    background-color: #034acefa;
+}
