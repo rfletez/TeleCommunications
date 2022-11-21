@@ -1,1 +1,54 @@
-<form></form>
+<p-blockUI [blocked]="blockedDocument"></p-blockUI>
+<nav class="navbar navbar-expand-lg fixed-top" id="headerStyle">
+    <a class="navbar-brand" [routerLink]="['/welcome']" style="font-size: 1.5em;">Telecom</a>
+</nav>
+
+<div class="main-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-8 offset-2 col-sm-3 offset-sm-3 pb-2 pt-5" 
+            [ngStyle]="{background: 'linear-gradient(#6A82FB, #FC5C7D)', 
+            color: 'white', borderRadius: '15px 0px 0px 15px'}">
+                <div [ngStyle]="{textAlign: 'center'}">
+                    <i class="pi pi-user icon"></i>
+                </div>
+                <div [ngStyle]="{textAlign: 'center'}" class="pt-4">
+                    <button type="button" pButton [routerLink]="['/register']" label="Register"></button>
+                </div>
+            </div>
+
+            <div class="col-8 offset-2 offset-sm-0 col-sm-3" 
+            [ngStyle]="{background: 'white', borderRadius: '0px 15px 15px 0px'}">
+                <h3 class="text-center">Login</h3>
+                <form [formGroup]="loginForm">
+                    <div class="ui-fluid">
+                        <div class="p-field">
+                            <label for="phoneNo">Phone No:</label>&nbsp;<span class="red">*</span>
+                            <input type="text" pInputText name="phoneNo" formControlName="phoneNo" />
+
+                            <div *ngIf="(loginForm.controls['phoneNo'].errors && (loginForm.controls['phoneNo'].dirty || loginForm.controls['phoneNo'].touched))" class="red">
+                                <div *ngIf="loginForm.controls['phoneNo'].errors['dirty']">Phone Number is required</div>
+                                <div *ngIf="loginForm.controls['phoneNo'].errors['pattern']">Phone Number should begin with 7, 8, or 9</div>
+                            </div>
+
+                        </div>
+
+                        <div class="p-field">
+                            <label for="password">Password</label>&nbsp;<span class="red">*</span>
+                            <input type="password" pInputText name="password" formControlName="password" />
+
+                            <div *ngIf="(loginForm.controls['password'].errors && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched))" 
+                                class="red">Phone Number should begin with 7, 8, or 9</div>
+                        </div>
+
+                        <div class="p-field text-center">
+                            <div *ngIf="errorMessage" class="red">{{errorMessage}}<br/> </div> <br/>
+                            <button type="button" pButton id="submit" (click)="login()" 
+                                [disabled]="!loginForm.valid" label="Login"></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

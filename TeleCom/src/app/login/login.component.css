@@ -1,0 +1,30 @@
+.red {
+    color: red;
+}
+
+.error {
+    color: red;
+}
+
+.line-breaker {
+    white-space: pre-line;
+}
+
+.ui-fluid .ui-button {
+    width: initial;
+}
+
+/*New styling for the Login component*/
+.icon {
+    font-size: 160px;
+}
+
+@media only screen and (max-device-width: 414px) {
+    .main-content {
+        margin-top: 20%;
+    }
+
+    .icon {
+        font-size: 100px;
+    }
+}
