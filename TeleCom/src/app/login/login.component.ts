@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
 
   submit: boolean = false;
   errorMessage: string = '';
-  loginForm: FormGroup | undefined;
+  loginForm!: FormGroup;
   blockedDocument: boolean = false;
 
   constructor(
