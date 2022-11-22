@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  contact1 = "./assets/images/contact/fb.jpeg";
+  contact2 = "./assets/images/contact/gp.jpeg";
+  contact3 = "./assets/images/contact/t.jpeg";
+  contact4 = "./assets/images/contact/yt.jpeg";
+
   constructor() { }
 
   ngOnInit(): void {
