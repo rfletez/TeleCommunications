@@ -1,0 +1,14 @@
+.activeLink {
+    background: white;
+    color: black !important;
+    border-radius: 10px;
+    font-style: normal !important;
+}
+
+.nav-link:hover {
+    transform: scale(1.12);
+}
+
+.bg-primary-Cust {
+    background-color: #034acefa;
+}
