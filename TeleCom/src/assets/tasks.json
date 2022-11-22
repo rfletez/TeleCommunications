@@ -1,3 +1,28 @@
 {
-    
+    "data": [
+        {
+            "icon":"pi pi-user",
+            "name":"Profile",
+            "route":"profile",
+            "description":"Description of profile information"
+        },
+        {
+            "icon":"pi pi-users",
+            "name":"Add Friend",
+            "route":"add-friend",
+            "description":"Description for add-friend"
+        },
+        {
+            "icon":"fa fa-phone",
+            "name":"Call Details",
+            "route":"call details",
+            "description":"Description for call-details"
+        },
+        {
+            "icon":"pi pi-list",
+            "name":"Plans",
+            "route":"view-plan",
+            "description":"Description for view-plan"
+        }
+    ]
 }
