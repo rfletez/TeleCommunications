@@ -9,7 +9,7 @@ export class TasksService {
 
   constructor(private http: HttpClient) { }
 
-  async getTask() {
+  async getTasks() {
     const res = await this.http
       .get<any>("assets/tasks.json")
       .toPromise();

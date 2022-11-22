@@ -11,9 +11,14 @@ export class HomeComponent implements OnInit {
   responsiveOptions?: [];
   tasks: Task[] = [];
 
-  constructor() { }
+  constructor(private taskService: TasksService) {
+    this.responsiveOptions = [];
+  }
 
   ngOnInit(): void {
+    this.taskService.getTasks().then((tasks) => {
+      this.tasks = tasks;
+    })
   }
 
 }
