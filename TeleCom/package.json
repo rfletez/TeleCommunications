@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+
+    "postinstall": "ngcc"
   },
   "private": true,
   "dependencies": {
@@ -20,10 +22,13 @@
     "@angular/router": "^14.2.0",
     "angular-animations": "^0.11.0",
     "bootstrap": "^5.2.3",
+    "browser-module": "^0.0.1",
     "font-awesome": "^4.7.0",
     "jquery": "^3.6.1",
+    "ng-block-ui": "^0.9.0",
     "primeflex": "^3.3.0",
-    "primeng": "^14.2.2",
+    "primeicons": "^6.0.1",
+    "primeng": "^12.2.3",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
