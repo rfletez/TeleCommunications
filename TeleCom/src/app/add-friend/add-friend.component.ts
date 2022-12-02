@@ -43,7 +43,7 @@ export class AddFriendComponent implements OnInit {
         "",
         [Validators.required, Validators.pattern("[6-9][0-9]{9}")]
       ]
-    });
+    }); 
   }
 
 }
