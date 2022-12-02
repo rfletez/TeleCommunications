@@ -1,0 +1,32 @@
+<app-header></app-header>
+
+<div class="main-content">
+    <div class="text-center" *ngIf="!callDetails">
+        <p-progressSpinner></p-progressSpinner>
+    </div>
+    <div *ngIf="callDetails">
+        <div class="container col-12 col-sm-9">
+            <input type="number" placeholder="Filter Based On" [(ngModel)]="filterParam" />
+        </div>
+
+        <div class="container col-12 col-sm-9">
+            <div class="card heading">
+                <span class="m-5 p-5">Called By</span>
+                <span class="m-5 p-5">Called To</span>
+                <span class="m-5 p-5">Called On</span>
+                <span class="m-5">Duration</span>
+            </div>
+
+            <div [ngStyle]="{height: '400px', overflow: 'overlay'}">
+                <div *ngFor="let calls of callDetails | filter: filterParam">
+                    <div class="card callBody">
+                        <span class="m-5 p-4">{{calls.calledBy}}</span>
+                        <span class="m-5 p-5">{{calls.calledTo}}</span>
+                        <span class="m-5 p-5">{{calls.calledOn}}</span>
+                        <span class="m-5">{{calls.duration}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

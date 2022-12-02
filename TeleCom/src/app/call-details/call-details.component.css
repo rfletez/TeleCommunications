@@ -1,0 +1,66 @@
+.red {
+    color: red;
+}
+table td {
+    border: 1px dotted black;
+}
+table th {
+    border: 1px dotted black;
+}
+
+td, th {
+    width: 137px;
+}
+
+.main-content {
+    margin-top: 5.5%;
+}
+
+@media only screen and (max-device-width: 414px) {
+    .main-content {
+        margin-top: 28%;
+    }
+}
+
+.heading {
+    height: 50px;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #3f51b5, #041886);
+    color: white;
+    line-height: 3;
+    padding-left: 10px;
+    display: block;
+}
+
+.callBody {
+    display: block;
+    height: 50px;
+    margin: 10px;
+    border-radius: 10px;
+    line-height: 3px;
+}
+
+input {
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    border-radius: 320px;
+    padding: 16px;
+    background-color: white;
+    text-shadow: 1px 1px 0 #fff;
+}
+
+input {
+    margin-right: 8px;
+    margin-bottom: 8px;
+    box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+input:focus {
+    box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
