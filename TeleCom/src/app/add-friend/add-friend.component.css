@@ -1,0 +1,77 @@
+p {
+    color: white;
+    text-shadow: 1px 1px 1px #fff;
+}
+form {
+    padding: 50px;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+.segment {
+    padding: 32px 0;
+    text-align: center;
+    color: white;
+}
+
+button, input {
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    border-radius: 320px;
+    padding: 16px;
+    background-color: white;
+    text-shadow: 1px 1px 0 #fff;
+}
+
+label {
+    display: block;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+input {
+    margin-right: 8px;
+    box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+    -webkit-appearance: none;
+}
+input:focus {
+    box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+button {
+    color: white;
+    background: linear-gradient(to bottom, #636fa4, #0052d4);
+    font-weight: bold;
+    box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: 600px;
+}
+button:hover {
+    box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+}
+button:active {
+    box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+
+button:disabled, button[disabled] {
+    border: 1px solid red;
+    background: linear-gradient(to bottom, #E0E0E0, F0F0F0);
+    color: black;
+    cursor: not-allowed;
+}
+button .icon {
+    margin-right: 8px;
+}
+
+button.unit {
+    margin-right: 8px;
+}
+button.unit .icon {
+    border-radius: 8px;
+    line-height: 0;
+}

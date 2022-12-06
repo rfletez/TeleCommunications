@@ -18,6 +18,7 @@ public class CustomerService {
 	@Autowired
 	private CustomerRepository customerRepo;
 	
+	//Creates Customer
 	public void createCustomer(CustomerDTO custDTO) {
 		logger.info("Creation request for customer {}", custDTO);
 		

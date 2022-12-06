@@ -19,6 +19,7 @@ import com.commute.customerMS.dto.CustomerDTO;
 import com.commute.customerMS.dto.LoginDTO;
 import com.commute.customerMS.dto.PlanDTO;
 import com.commute.customerMS.service.CustomerService;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 
 @RestController
@@ -31,11 +32,8 @@ public class CustomerController {
 	@Autowired
 	private CustomerService custService;
 	
-	@Value("${friend.uri}")
-	private String friendUri;
-	
-	@Value("${path.uri}")
-	private String pathUri;
+	@Autowired
+	private RestTemplate restTemplate;
 	
 	
 	//Create a new customer
@@ -55,19 +53,25 @@ public class CustomerController {
 	}
 	
 	//Fetches full profile of a specific customer
+	@HystrixCommand(fallbackMethod="getCustomerProfileFallback")
 	@GetMapping("/customers/{phoneNo}")
 	public CustomerDTO getCustomerProfile(@PathVariable("phoneNo") Long phoneNo) {
 		logger.info("Profile request for customer {}", phoneNo);
 		
 		CustomerDTO custDTO = custService.getCustomerProfile(phoneNo);
-		PlanDTO planDTO = new RestTemplate().getForObject(pathUri+custDTO.getCurrentPlan().getPlanId(), PlanDTO.class);
+		PlanDTO planDTO = restTemplate.getForObject("http://PLANMS"+"/plans/"+custDTO.getCurrentPlan().getPlanId(), PlanDTO.class);
 		custDTO.setCurrentPlan(planDTO);
 		
 		@SuppressWarnings("unchecked")
-		List<Long> friends = new RestTemplate().getForObject(friendUri+phoneNo+"/friends", List.class);
+		List<Long> friends = restTemplate.getForObject("http://FRIENDFAMILYMS"+"/customers/"+phoneNo+"/friends", List.class);
 		custDTO.setFriendAndFamily(friends);
 		
 		return custDTO;
+	}
+	
+	public CustomerDTO getCustomerProfileFallback(Long phoneNo) {
+		System.out.println("-------In Falback()-------"+phoneNo);
+		return new CustomerDTO();
 	}
 
 }
